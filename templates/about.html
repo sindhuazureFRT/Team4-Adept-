@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en_AU" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Adept</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="pinterest" content="nopin" />
+    <link rel="stylesheet" href="{{url_for('static' ,filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="#" />
+</head>
+<body data-instant-intensity="mousedown">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3">
+        <div class="container">
+            <a class="navbar-brand" href="/">Adept</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/about">About</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/Findjobs">Find Jobs</a>
+                    </li>                                       
+                </ul>               
+                <a class="btn btn-outline-primary me-2" href="/login" type="submit">Login</a>
+                <a class="btn btn-primary" href="/postjobs" type="submit">Post a Job</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="section-0 lazy d-flex bg-image-style dark align-items-center "   class="" data-bg="assets/images/banner5.jpg">
+    <img src="{{url_for('static', filename='img.jpg')}}" alt="Image1">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-8">
+                <h1>Adept Team Members</h1>
+             </div>
+        </div>
+    </div>
+</section>
+
+
+
+ 
+
+<section class="section-3  py-5">
+    <div class="container">
+        <h2>Our Team</h2>
+        <div class="row pt-5">
+            <div class="job_listing_area">                    
+                <div class="job_lists">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card border-0 p-3 shadow mb-4">
+                                <div class="card-body">
+                                    <h3 class="border-0 fs-5 pb-2 mb-0">M.Sanjai <br> [ Cloud Engineer ]</h3>
+                        
+                                   <p>Seasoned Azure Cloud Engineer specializing in architecting and deploying cloud solutions on the Microsoft Azure platform. Demonstrated expertise in designing scalable and reliable infrastructure, implementing security best practices, and optimizing performance. Proficient in Azure services such as Azure Virtual Machines, Azure Kubernetes Service, and Azure DevOps. Skilled in scripting languages for automation and adept at troubleshooting and resolving complex issues. Committed to staying current with Azure updates and leveraging cutting-edge technologies to drive innovation in cloud environments</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card border-0 p-3 shadow mb-4">
+                                <div class="card-body">
+                                    <h3 class="border-0 fs-5 pb-2 mb-0">R.Aparna <br> [ Frontend Developer ]</h3>
+                                    <p>Versatile Frontend Developer with a passion for creating engaging and responsive user interfaces. Proficient in HTML, CSS, and JavaScript, with a keen eye for design and user experience. Experienced in working with various frontend frameworks such as React, Angular, or Vue.js. Skilled in translating design mockups into functional and visually appealing websites or applications. Up-to-date on industry trends, responsive design principles, and cross-browser compatibility. Strong collaboration and communication skills, dedicated to delivering high-quality and accessible web experiences.           
+
+                                        
+                                    </p>
+                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 p-3 shadow mb-4">
+                                <div class="card-body">
+                                    <h3 class="border-0 fs-5 pb-2 mb-0">S.Sindhu <br>[ Backend Developer ]</h3>
+                                    <p>Seasoned Backend Developer adept at designing and implementing robust server-side architecture. Proficient in programming languages like Python, Java, or Node.js, with a focus on efficiency, scalability, and security. Experienced in database management, API development, and optimizing system performance. Skilled in working with frameworks like Django, Flask, Spring, or Express. Passionate about solving complex technical challenges and ensuring seamless interactions between frontend and backend components. Committed to staying updated on emerging technologies and best practices in backend development. </p>
+                            
+                                </div>
+                            </div>
+                        </div>
+                        
+
+<footer class="bg-dark py-3 bg-2">
+<div class="container">
+    <p class="text-center text-white pt-3 fw-bold fs-6">© 2024 Adept, all right reserved</p>
+</div>
+</footer> 
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
