@@ -19,24 +19,28 @@
 <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3">
 		<div class="container">
-			<a class="navbar-brand" href="/">Adept</a>
+			<a class="navbar-brand" href="/"><p class="fs-2" style="color:rgba(9, 16, 198);">Adept</p></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/">Home</a>
+						<a class="nav-link" aria-current="page" href="/"><p class="fs-5">Home</p></a>
 					</li>	
                     <li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/about">About</a>
+						<a class="nav-link" aria-current="page" href="/about"><p class="fs-5">About</p></a>
 					</li>	
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/govtblob"><p class="fs-5">Govt Blob</p></a>
+                    </li> 
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/Findjobs">Find Jobs</a>
-					</li>										
+						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p></a>
+					</li>	
+                   										
 				</ul>
-				<a class="btn btn-outline-primary me-2" href="/login" type="submit">Login</a>
-				<a class="btn btn-primary" href="/postjobs" type="submit">Post a Job</a>
+				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
 	</nav>
@@ -47,7 +51,7 @@
             <div class="col-6 col-md-10 ">
                 <h2>Find Jobs</h2>  
             </div>
-            <div class="col-6 col-md-2">
+            <!-- <div class="col-6 col-md-2">
                 <div class="align-end">
                     <select name="sort" id="sort" class="form-control">
                         <option value="">Latest</option>
@@ -122,168 +126,61 @@
                         </select>
                     </div>                    
                 </div>
-            </div>
+            </div>-->
             <div class="col-md-8 col-lg-9 ">
                 <div class="job_listing_area">                    
                     <div class="job_lists">
+                    {%for i in findjobs%}
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="card border-0 p-3 shadow mb-4">
-                                <div class="card-body">
-                                    <h3 class="border-0 fs-5 pb-2 mb-0">Web Developer</h3>
-                                    <p>We are in need of a Web Developer for our company.</p>
-                                    <div class="bg-light p-3 border">
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
-                                            <span class="ps-1">Noida</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
-                                            <span class="ps-1">Remote</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-usd"></i></span>
-                                            <span class="ps-1">2-3 Lacs PA</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
+                       
+                      
+                       <div class="col-md-7">
+                        <div class="card border-0 p-3 shadow mb-4">
+                            <div class="card-body">
+                                <h3 class="border-0 fs-5 pb-2 mb-0" >{{i[0]}}</h3>
+                                
+                                <div class="bg-light p-3 border">
+                                    <p class="mb-0">
+                                        <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
+                                        <span class="ps-1">{{i[5]}}</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
+                                        <span class="ps-1">{{i[2]}}</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bolder"><i class="fa fa-usd"></i></span>
+                                        <span class="ps-1">{{i[4]}}</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bolder"><i class="/"></i></span>
+                                        <h6 style="color:rgba(9, 16, 198);">Job description:<span class="ps-1" style="color:rgb(20, 20, 24);">{{i[6]}}</span></h6>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bolder"><i class="/"></i></span>
+                                        <h6 style="color:rgba(9, 16, 198);" >Qualification:<span class="ps-1" style="color:rgba(20, 20, 24);">{{i[7]}}</span></h6>
+                                    </p>
+                                    
+                                </div>
+                                <p>Company name: {{i[9]}}</p>
+                                <p>company location: {{i[10]}}</p>
+                                <p>Website: {{i[11]}}</p>
+                                
+                                    <div class="border-bottom"></div>
+                                    <div class="pt-3 text-end">
+                                        <a href="/jobapply" class="btn btn-success">Apply</a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="card border-0 p-3 shadow mb-4">
-                                <div class="card-body">
-                                    <h3 class="border-0 fs-5 pb-2 mb-0">Web Developer</h3>
-                                    <p>We are in need of a Web Developer for our company.</p>
-                                    <div class="bg-light p-3 border">
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
-                                            <span class="ps-1">Noida</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
-                                            <span class="ps-1">Remote</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-usd"></i></span>
-                                            <span class="ps-1">2-3 Lacs PA</span>
-                                        </p>
-                                    </div>
 
-                                    <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
-                                    </div>
-                                </div>
+                                <!-- <div class="d-grid mt-3">
+                                    <a href="/jobdetail" class="btn btn-success btn-lg">Details</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 p-3 shadow mb-4">
-                                <div class="card-body">
-                                    <h3 class="border-0 fs-5 pb-2 mb-0">Web Developer</h3>
-                                    <p>We are in need of a Web Developer for our company.</p>
-                                    <div class="bg-light p-3 border">
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
-                                            <span class="ps-1">Noida</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
-                                            <span class="ps-1">Remote</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-usd"></i></span>
-                                            <span class="ps-1">2-3 Lacs PA</span>
-                                        </p>
-                                    </div>
+                    </div>
 
-                                    <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 p-3 shadow mb-4">
-                                <div class="card-body">
-                                    <h3 class="border-0 fs-5 pb-2 mb-0">Web Developer</h3>
-                                    <p>We are in need of a Web Developer for our company.</p>
-                                    <div class="bg-light p-3 border">
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
-                                            <span class="ps-1">Noida</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
-                                            <span class="ps-1">Remote</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-usd"></i></span>
-                                            <span class="ps-1">2-3 Lacs PA</span>
-                                        </p>
-                                    </div>
 
-                                    <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 p-3 shadow mb-4">
-                                <div class="card-body">
-                                    <h3 class="border-0 fs-5 pb-2 mb-0">Web Developer</h3>
-                                    <p>We are in need of a Web Developer for our company.</p>
-                                    <div class="bg-light p-3 border">
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
-                                            <span class="ps-1">Noida</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
-                                            <span class="ps-1">Remote</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-usd"></i></span>
-                                            <span class="ps-1">2-3 Lacs PA</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card border-0 p-3 shadow mb-4">
-                                <div class="card-body">
-                                    <h3 class="border-0 fs-5 pb-2 mb-0">Web Developer</h3>
-                                    <p>We are in need of a Web Developer for our company.</p>
-                                    <div class="bg-light p-3 border">
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
-                                            <span class="ps-1">Noida</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-clock-o"></i></span>
-                                            <span class="ps-1">Remote</span>
-                                        </p>
-                                        <p class="mb-0">
-                                            <span class="fw-bolder"><i class="fa fa-usd"></i></span>
-                                            <span class="ps-1">2-3 Lacs PA</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       {% endfor %}
                                                  
                     </div>
                     </div>
@@ -293,7 +190,7 @@
         </div>
     </div>
 </section>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -307,7 +204,7 @@
                 <input type="file" class="form-control" id="image"  name="image">
             </div>
             <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary mx-3">Update</button>
+                <button type="submit" class="btn btn-success mx-3">Update</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             
@@ -315,7 +212,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <footer class="bg-dark py-3 bg-2">
 <div class="container">

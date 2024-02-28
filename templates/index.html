@@ -14,23 +14,26 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="static/style.css" />
 	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="#" />
+	<link rel="icon" type="image/x-icon" href="{{url_for('static' ,filename='adept.jpeg')}}" />
     
     
     <style type="text/css">
         #carouselExampleCaptions
         img
         {
-           height: 450px;
-           border-radius: 20px;
+           height: 100px;
+           min-height: 400px;
+           
         }
+       
+
     </style>
 </head>
 <body data-instant-intensity="mousedown">
 <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3">
 		<div class="container">
-			<a class="navbar-brand" href="/">Adept</a>
+			<a class="navbar-brand" href="/"><p class="fs-2" style="color:rgba(9, 16, 198);">Adept</p></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -38,17 +41,31 @@
 				<ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
                     
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/">Home</a>
+						<a class="nav-link" aria-current="page" href="/"><p class="fs-5">Home</p></a>
 					</li>	
                     <li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/about">About</a>
+						<a class="nav-link" aria-current="page" href="/about"><p class="fs-5">About</p></a>
 					</li>	
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/govtblob"><p class="fs-5">Govt Blob</p></a>
+                    </li> 
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/Findjobs">Find Jobs</a>
-					</li>										
+						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p> </a>
+					</li>	
+                    
 				</ul>				
-				<a class="btn btn-outline-primary me-2" href="/login" type="submit">Login</a>
-				<a class="btn btn-primary" href="/postjobs" type="submit">Post a Job</a>
+                <!-- <a class="btn btn-success me-2" href="/" type="submit">Home</a>
+                <a class="btn btn-success me-2" href="/about" type="submit">About</a>
+                <a class="btn btn-success me-2" href="/Findjobs" type="submit">Findjobs</a>
+                <a class="btn btn-success me-2" href="/account" type="submit">Profile</a> -->
+                {% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
+        
+				<a class="btn btn-success my-2 my-sm-0" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
 	</nav>
@@ -61,15 +78,15 @@
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner ">
       <div class="carousel-item active">
-        <img src="https://www.shutterstock.com/image-vector/abstract-mountain-path-top-way-600nw-2340462265.jpg" class="d-block w-100" alt="...">
+        <img src="{{url_for('static', filename='img5.jpg')}}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://png.pngtree.com/thumb_back/fh260/back_pic/03/76/37/2257bea537b28e6.jpg" class="d-block w-100" alt="...">
+        <img src="{{url_for('static', filename='img12.jpg')}}" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://png.pngtree.com/background/20210709/original/pngtree-big-data-background-picture-image_684821.jpg" class="d-block w-100" alt="...">
+        <img src="{{url_for('static', filename='job3.jpg')}}" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -110,7 +127,7 @@
                 
                 <div class=" col-md-3 mb-xs-3 mb-sm-3 mb-lg-0">
                     <div class="d-grid gap-2">
-                        <a href="/Findjobs" class="btn btn-primary btn-block">Search</a>
+                        <a href="/Findjobs" class="btn btn-success btn-block">Search</a>
                     </div>
                     
                 </div>
@@ -125,43 +142,43 @@
         <div class="row pt-5">
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Marketing</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgba(9, 16, 198);">Marketing</h4></a>
                     <p class="mb-0"> <span>50</span> Available position</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Billing</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Billing</h4></a>
                     <p class="mb-0"> <span>50</span> Available position</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Service</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Service</h4></a>
                     <p class="mb-0"> <span>50</span> Available position</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Labour</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Labour</h4></a>
                     <p class="mb-0"> <span>50</span> Available position</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Govt jobs</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Govt jobs</h4></a>
                     <p class="mb-0"> Info</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Abroad</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Abroad</h4></a>
                     <p class="mb-0"> Info</p>
                 </div>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
-                    <a href="/Findjobs"><h4 class="pb-2">Job for hours</h4></a>
+                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Job for hours</h4></a>
                     <p class="mb-0"> <span>50</span> Available position</p>
                 </div>
             </div>
@@ -200,7 +217,7 @@
                                     </div>
 
                                     <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
+                                        <a href="/jobdetail" class="btn btn-success btn-lg">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +244,7 @@
                                     </div>
 
                                     <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
+                                        <a href="/jobdetail" class="btn btn-success btn-lg">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +270,7 @@
                                     </div>
 
                                     <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
+                                        <a href="/jobdetail" class="btn btn-success btn-lg">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +296,7 @@
                                     </div>
 
                                     <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
+                                        <a href="/jobdetail" class="btn btn-success btn-lg">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -305,7 +322,7 @@
                                     </div>
 
                                     <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg">Details</a>
+                                        <a href="/jobdetail" class="btn btn-success btn-lg">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -331,7 +348,7 @@
                                     </div>
 
                                     <div class="d-grid mt-3">
-                                        <a href="/jobdetail" class="btn btn-primary btn-lg ">Details</a>
+                                        <a href="/jobdetail" class="btn btn-success btn-lg ">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -357,7 +374,7 @@
                 <input type="file" class="form-control" id="image"  name="image">
             </div>
             <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary mx-3">Update</button>
+                <button type="submit" class="btn btn-success mx-3">Update</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             

@@ -13,30 +13,33 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="src/style.css" />
 	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="#" />
+	<!--<link rel="shortcut icon" type="image/x-icon" href="#" />
 </head>
 <body data-instant-intensity="mousedown">
 <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3">
 		<div class="container">
-			<a class="navbar-brand" href="/">Adept</a>
+			<a class="navbar-brand" href="/"><p class="fs-2" style="color:rgba(9, 16, 198);">Adept</p></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/">Home</a>
+						<a class="nav-link" aria-current="page" href="/"><p class="fs-5">Home</p></a>
 					</li>
                     <li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/about">About</a>
+						<a class="nav-link" aria-current="page" href="/about"><p class="fs-5">About</p></a>
 					</li>	
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/Findjobs">Find Jobs</a>
-					</li>										
+						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p></a>
+					</li>		
+                    <li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/account"><p class="fs-5">Profile</p></a>
+					</li>								
 				</ul>				
-				<a class="btn btn-outline-primary me-2" href="/login" type="submit">Login</a>
-				<a class="btn btn-primary" href="/postjobs" type="submit">Post a Job</a>
+				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
 	</nav>
@@ -47,8 +50,8 @@
             <div class="col">
                 <nav aria-label="breadcrumb" class=" rounded-3 p-3 mb-4">
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active">Account Settings</li>
+                        <li class="breadcrumb-item"><a href="/" style="color:rgb(9, 16, 198);">Home</a></li>
+                        <li class="breadcrumb-item active">My Profile</li>
                     </ol>
                 </nav>
             </div>
@@ -61,17 +64,17 @@
                         <h5 class="mt-3 pb-0">Mohit Singh</h5>
                         <p class="text-muted mb-1 fs-6">Full Stack Developer</p>
                         <div class="d-flex justify-content-center mb-2">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-primary">Change Profile Picture</button>
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-success">Change Profile Picture</button>
                         </div>
                     </div>
                 </div>
                 <div class="card account-nav border-0 shadow mb-4 mb-lg-0">
                     <div class="card-body p-0">
                         <ul class="list-group list-group-flush ">
-                            <li class="list-group-item d-flex justify-content-between p-3">
-                                <a href="/account">Account Settings</a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <!-- <li class="list-group-item d-flex justify-content-between p-3">
+                                <a href="/account">My Profile</a>
+                            </li> -->
+                            <!-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                                 <a href="/postjobs">Post a Job</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
@@ -80,7 +83,7 @@
                             
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                                 <a href="/savedjobs">Saved Jobs</a>
-                            </li>                                                        
+                            </li>                                                         -->
                         </ul>
                     </div>
                 </div>
@@ -89,29 +92,31 @@
                 <div class="card border-0 shadow mb-4">
                     <div class="card-body  p-4">
                         <h3 class="fs-4 mb-1">My Profile</h3>
-                        <div class="mb-4">
+                        <form action="/account" method="POST">
+                        <div class="mb-4 ">
                             <label for="" class="mb-2">Name*</label>
-                            <input type="text" placeholder="Enter Name" class="form-control" value="">
+                            <input type="text" name="name" id="name"  placeholder="Enter Name" class="form-control" value="">
                         </div>
                         <div class="mb-4">
                             <label for="" class="mb-2">Email*</label>
-                            <input type="text" placeholder="Enter Email" class="form-control">
+                            <input type="text" name="email" id="email" placeholder="Enter Email" class="form-control">
                         </div>
                         <div class="mb-4">
                             <label for="" class="mb-2">Designation*</label>
-                            <input type="text" placeholder="Designation" class="form-control">
+                            <input type="text" name="designation" id="designation" placeholder="Designation" class="form-control">
                         </div>
                         <div class="mb-4">
                             <label for="" class="mb-2">Mobile*</label>
-                            <input type="text" placeholder="Mobile" class="form-control">
+                            <input type="text" name="mobile" id="mobile" placeholder="Mobile" class="form-control">
                         </div>                        
                     </div>
                     <div class="card-footer  p-4">
-                        <button type="button" class="btn btn-primary">Update</button>
+                        <button class="btn btn-success mt-2">Update</button>
                     </div>
                 </div>
+            </form>
 
-                <div class="card border-0 shadow mb-4">
+                <!-- <div class="card border-0 shadow mb-4">
                     <div class="card-body p-4">
                         <h3 class="fs-4 mb-1">Change Password</h3>
                         <div class="mb-4">
@@ -128,13 +133,13 @@
                         </div>                        
                     </div>
                     <div class="card-footer  p-4">
-                        <button type="button" class="btn btn-primary">Update</button>
+                        <button type="button" class="btn btn-success">Update</button>
                     </div>
                 </div>                
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -149,7 +154,7 @@
                 <input type="file" class="form-control" id="image"  name="image">
             </div>
             <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary mx-3">Update</button>
+                <button type="submit" class="btn btn-success mx-3">Update</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             

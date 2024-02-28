@@ -36,18 +36,14 @@
                     </li> 
 					<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p></a>
-					</li>
-                   
-                    <li class="nav-item">
-						<a class="nav-link" aria-current="page" href="/jobapply"><p class="fs-5"></p></a>
-					</li>										
+					</li>		
+                   								
 				</ul>				
 				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
 	</nav>
-
 </header>
 <section class="section-5 bg-2">
     <div class="container py-5">
@@ -56,7 +52,7 @@
                 <nav aria-label="breadcrumb" class=" rounded-3 p-3 mb-4">
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="/" style="color:rgb(9, 16, 198);">Home</a></li>
-                        <li class="breadcrumb-item active">Post a Job</li>
+                        <li class="breadcrumb-item active">My Jobs</li>
                     </ol>
                 </nav>
             </div>
@@ -72,113 +68,74 @@
                              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                                  <a href="/applications" style="color:rgb(9, 16, 198);">Applications</a>
                              </li>
-                                                                                     
+                                                                                   
                          </ul>
                     </div>
                 </div>
-            </div>
                 
-            <div class="col-lg-9">
-                <div class="card border-0 shadow mb-4 ">
-                    <div class="card-body card-form p-4">
-                        <form action="/postjobs" method="POST">
-                        <h3 class="fs-4 mb-1">Job Details</h3>
-                        <div class="row">
-                            
-                            <div class="col-md-6 mb-4">
-                                <label for="" class="mb-2">Title<span class="req">*</span></label>
-                                <input type="text" placeholder="Job Title" id="title" name="title" class="form-control">
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label for="" class="mb-2">Category<span class="req">*</span></label>
-                                <select name="category" id="category" class="form-control">
-                                    <option value="">Select a Category</option>
-                                    <option value="Marketing">Marketing</option>
-                                    <option value="Billing">Billing</option>
-                                    <option value="Service">Service</option>
-                                    <option value="Labour">Labour</option>
-                                    <option value="Govt Jobs">Govt Jobs</option>
-                                    <option value="Job for hours">Job for hours</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label for="" class="mb-2">Job Nature<span class="req">*</span></label>
-                                <select name="jobnature" id="jobnature" class="form-control">
-                                    <option>Select a Nature</option>
-                                    <option>Full Time</option>
-                                    <option>Part Time</option>
-                                    <option>Job for hours</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label for="" class="mb-2">Vacancy<span class="req">*</span></label>
-                                <input type="text" placeholder="Vacancy" id="vacancy" name="vacancy" class="form-control">
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="mb-4 col-md-6">
-                                <label for="" class="mb-2">Salary</label>
-                                <input type="text" placeholder="Salary" id="salary" name="salary" class="form-control">
-                            </div>
-
-                            <div class="mb-4 col-md-6">
-                                <label for="" class="mb-2">Location<span class="req">*</span></label>
-                                <input type="text" placeholder="location" id="location" name="location" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="" class="mb-2">Description<span class="req">*</span></label>
-                            <textarea class="form-control" name="description" id="description" cols="5" rows="5" placeholder="Description"></textarea>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="" class="mb-2">Qualifications</label>
-                            <textarea class="form-control" name="qualifications" id="qualifications" cols="5" rows="5" placeholder="Qualifications"></textarea>
-                        </div>
-                        
-                        
-
-                        <div class="mb-4">
-                            <label for="" class="mb-2">Keywords<span class="req">*</span></label>
-                            <input type="text" placeholder="keywords" id="keywords" name="keywords" class="form-control">
-                        </div>
-                    
-
-                        <h3 class="fs-4 mb-1 mt-5 border-top pt-5">Company Details</h3>
-
-                        <div class="row">
-                            <div class="mb-4 col-md-6">
-                                <label for="" class="mb-2">Name<span class="req">*</span></label>
-                                <input type="text" placeholder="Company Name" id="company_name" name="name" class="form-control">
-                            </div>
-
-                            <div class="mb-4 col-md-6">
-                                <label for="" class="mb-2">Location</label>
-                                <input type="text" placeholder="Location" id="company_location" name="companylocation" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="" class="mb-2">Website</label>
-                            <input type="text" placeholder="Website" id="website" name="website" class="form-control">
-                        </div>
-                     
-                        <div class="card-footer  p-4">
-                            <button class="btn btn-success mt-2">Save Job</button>
-                    
-                        </div> 
-                        </form>              
-                    </div>
-            
-                </div>
             </div>
+            <div class="col-lg-9">
+                <div class="card border-0 shadow mb-4 p-3">
+                    <div class="card-body card-form">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h3 class="fs-4 mb-1">Applications</h3>
+                            </div>
+                            <div style="margin-top: -10px;">
+                                <a href="/postjobs" class="btn btn-success">Post a Job</a>
+                            </div>
+                            
+                        </div>
+                        {%for j in application%}
+                        <div class="table-responsive">
+                            <table class="table ">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Mobile</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Place</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-0">
+                                    <tr class="active">
+                                        <td>
+                                            <div class="job-name fw-500">{{j[0]}}</div>
 
+                                        </td>
+                                        <td>{{j[3]}}</td>
+                                        <td>{{j[2]}}</td>
+                                        <td>
+                                            <div class="job-status text-capitalize">{{j[5]}}</div>
+                                        </td>
+                                        <td>
+                                            <div class="job-status text-capitalize">{{j[7]}}</div>
+                                        </td>
+                                        <td>
+                                            <div class="action-dots float-end">
+                                                <a href="#" class="" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                    <li><a class="dropdown-item" href="/jobdetail"> <i class="fa fa-eye" aria-hidden="true"></i> Accept</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fa fa-edit" aria-hidden="true"></i> Edit</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fa fa-trash" aria-hidden="true"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
 </section>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -202,7 +159,7 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
 
 <footer class="bg-dark py-3 bg-2">
 <div class="container">
@@ -212,8 +169,9 @@
 
 
 
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-</html> 
+</html>

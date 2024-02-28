@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="src/style.css" />
 	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="#" />
+	<link rel="shortcut icon" type="image/x-icon" href="/login" />
 </head>
 <body data-instant-intensity="mousedown">
 <header>
@@ -36,10 +36,10 @@
                     </li> 
 					<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p></a>
-					</li>	
-                    									
-				</ul>				
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+					</li>				
+                    					
+				</ul>		
+				<a class="btn btn-success me-2" href="/login" type="submit">Log out</a>
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
@@ -51,32 +51,29 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
                 <div class="card shadow border-0 p-5">
-                    <h1 class="h3">Register</h1>
-                    <form action="/register" method="POST">
-                        <div class="mb-3">
-                            <label for="" class="mb-2">Name*</label>
-                            <input type="text" name="Name" id="name" class="form-control" placeholder="Enter Name">
-                        </div> 
+                    <h1 class="h3">Login</h1>
+                    <form action='/log' method="POST">
                         <div class="mb-3">
                             <label for="" class="mb-2">Email*</label>
-                            <input type="text" name="Email" id="email" class="form-control" placeholder="Enter Email">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="example@example.com">
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Password*</label>
-                            <input type="password" name="Password" id="name" class="form-control" placeholder="Enter Password">
+                            <input type="password" name="password" id="name" class="form-control" placeholder="Enter Password">
                         </div> 
-                        <div class="mb-3">
-                            <label for="" class="mb-2">Confirm Password*</label>
-                            <input type="password" name="Confirm" id="name" class="form-control" placeholder="Enter Password">
-                        </div> 
-                        <button class="btn btn-success mt-2">Register</button>
+                        <div class="justify-content-between d-flex">
+                        <button class="btn btn-primary mt-2">Login</button>
+                            <a href="forgot-password.html" class="mt-3">Forgot Password?</a>
+                        </div>
                     </form>                    
                 </div>
                 <div class="mt-4 text-center">
-                    <p>Have an account?</p> <a  href="/login"><p style="color:rgb(9, 16, 198);">Login</p></a>
+                    <p>Do not have an account? <a  href="/register">Register</a></p>
                 </div>
             </div>
         </div>
+        <div class="py-lg-5">&nbsp;</div>
+    </div>
 </section>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -107,6 +104,7 @@
     <p class="text-center text-white pt-3 fw-bold fs-6">© 2024 Adept, all right reserved</p>
 </div>
 </footer> 
+
 
 
 
