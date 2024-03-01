@@ -158,6 +158,12 @@ def applications():
 @app.route('/govtblob')
 def govtblob():
     return render_template("blob.html")
+@app.route('/thankyou')
+def thankyou():
+    return render_template("thankyou.html")
+@app.route('/chatbot')
+def chatbot():
+    return render_template("chatbot.html")
 @app.route('/jobapplied')
 def jobapplied():
     return render_template('job-applied.html')

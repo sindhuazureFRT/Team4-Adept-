@@ -37,6 +37,9 @@
 					<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p></a>
 					</li>
+                    <li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/chatbot"><p class="fs-5">Chat Bot</p></a>
+					</li>
                    	
                    									
 				</ul>				
@@ -53,7 +56,7 @@
 </header>
 <style type="text/css">
     body {
-        background-image: url('{{url_for('static', filename='job9.jpg')}}');
+        background-image: url('{{url_for("static", filename="job9.jpg")}}');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -108,7 +111,7 @@
                             <label for="" class="mb-2">Date*</label>
                             <input type="date" name="date" required id="date" class="form-control" >
                         </div> 
-                        <button class="btn btn-success mt-2">Apply</button>
+                        <button class="btn btn-success mt-2" onclick="alert('Submitted your request successfuly')">Apply</button>
                     </form>                    
                 </div>
         

@@ -38,6 +38,9 @@
 					<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="/Findjobs"><p class="fs-5">Find Jobs</p></a>
 					</li>	
+                    <li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/chatbot"><p class="fs-5">Chat Bot</p></a>
+					</li>
                    										
 				</ul>
 				{% if 'email' in session %}
@@ -51,22 +54,7 @@
 		</div>
 	</nav>
 </header>
-<style type="text/css">
-    body {
-        background-image: url('{{url_for('static', filename='job9.jpg')}}');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        /* Add additional styles as needed */
-    }
 
-    /* Add styles for other elements or sections as needed */
-    .section-1 {
-        background-color: rgba(255, 255, 255, 0.8); /* Example: Semi-transparent white background for section-1 */
-    }
-
-    /* Add more styles for other sections or elements as needed */
-</style>
 <section class="section-3 bg-2 py-5">
     <div class="container">
         <h2>Latest Jobs</h2>
@@ -133,29 +121,6 @@
 
     
 </section>
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title pb-0" id="exampleModalLabel">Change Profile Picture</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Profile Image</label>
-                <input type="file" class="form-control" id="image"  name="image">
-            </div>
-            <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-success mx-3">Update</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-            
-        </form>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <footer class="bg-dark py-3 bg-2">
 <div class="container">
