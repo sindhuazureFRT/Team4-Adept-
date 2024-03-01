@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="src/style.css" />
 	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static' ,filename='Adept.png')}}" />
 </head>
 <body data-instant-intensity="mousedown">
 <header>
@@ -50,69 +50,85 @@
 			</div>
 		</div>
 	</nav>
+</header>
+<style type="text/css">
+    body {
+        background-image: url('{{url_for('static', filename='job9.jpg')}}');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Add additional styles as needed */
+    }
 
-    <div class="col-lg-9">
-       <center> <div class="">
-            <div class="card-body card-form p-4">
-           
-                <h3 class="fs-4 mb-1">Job Application</h3>
-                <div class="row">
+    /* Add styles for other elements or sections as needed */
+    .section-1 {
+        background-color: rgba(255, 255, 255, 0.8); /* Example: Semi-transparent white background for section-1 */
+    }
+
+    /* Add more styles for other sections or elements as needed */
+</style>
+
+<section class="section-5">
+    <div class="container my-5">
+        <div class="py-lg-2">&nbsp;</div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow border-0 p-5">
+                    <h1 class="h3">Job Application</h1>
                     <form action="/jobapply" method="POST">
-                    <div class="col-md-6 mb-4">
-                        <label for="" class="mb-2">First Name<span class="req">*</span></label>
-                        <input type="text" placeholder="Enter First Name" id="first-name" name="firstname" required class="form-control">
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="" class="mb-2">Last Name<span class="req">*</span></label>
-                        <input type="text" placeholder="Enter Last Name" id="last-name" name="lastname" required class="form-control">
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="" class="mb-2">Email<span class="req">*</span></label>
-                        <input type="email" placeholder="Enter Email" id="last-name" name="email" required class="form-control">
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="" class="mb-2">Mobile<span class="req">*</span></label>
-                        <input type="text" placeholder="Enter mobile number" id="last-name" name="mobile" required class="form-control">
-                    </div>
-                    <div class="col-md-6  mb-4">
-                        <label for="" class="mb-2">City<span class="req">*</span></label>
-                        <input type="text"  placeholder="Enter City" id="city" name="city" required class="form-control">
-                    </div>
+                        <div class="mb-3">
+                            <label for="" class="mb-2">First Name*</label>
+                            <input type="text" name="firstname" required id="firstname" class="form-control" placeholder="Enter First Name">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="" class="mb-2">Last Name*</label>
+                            <input type="text" name="lastname" required id="lastname" class="form-control" placeholder="Enter Last Name">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="" class="mb-2">Email*</label>
+                            <input type="email" name="email"  required id="email" class="form-control" placeholder="Enter Email">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="" class="mb-2">Mobile No*</label>
+                            <input type="number" name="mobile" required id="mobile" class="form-control" placeholder="Enter Mobile Number">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="" class="mb-2">City*</label>
+                            <input type="text" name="city"  required id="city" class="form-control" placeholder="Enter City">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="mb-2">Job Role*</label>
+                            <input type="text" name="jobrole"  required id="jobrole" class="form-control" placeholder="Enter your jobrole">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="" class="mb-2">Pincode*</label>
+                            <input type="number" name="pincode" required id="pincode" class="form-control" placeholder="Enter pincode">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="" class="mb-2">Date*</label>
+                            <input type="date" name="date" required id="date" class="form-control" >
+                        </div> 
+                        <button class="btn btn-success mt-2">Apply</button>
+                    </form>                    
                 </div>
-                
-                <div class="row">
-                   <center><div class="col-md-6 mb-4">
-                        <label for="" class="mb-2">Job role<span class="req">*</span></label>
-                        <input type="text"  placeholder="Enter job role" id="job role" name="jobrole" required class="form-control">
-                    </div></center> 
-                        
-                    </div>
-
-                    
-                </div>
-
-                <div class="row">
-                   <center><div class="col-md-6 mb-4 ">
-                        <label for="" class="mb-2">Pincode</label>
-                        <input type="pincode" placeholder="Enter Pincode" id="pincode" name="pincode" required class="form-control">
-                    </div></center>
-
-                    <center><div class="mb-4 col-md-6">
-                        <label for="" class="mb-2">Date<span class="req">*</span></label>
-                        <input type="date"  id="date" name="date"  required value="2022-10-24"class="form-control">
-                    </div></center>
-
-                </div>
-
-                
-                
-                 
-            <div class="card-footer  p-4">
-                <button class="btn btn-success mt-2">Apply Now</button>
-            </div>   
-        </form>  
-    </div></center>
+        
+            </div>
+        </div>
+</section>
+<footer class="bg-dark py-3 bg-2">
+    <div class="container">
+        <p class="text-center text-white pt-3 fw-bold fs-6">© 2024 Adept, all right reserved</p>
+    </div>
+    </footer> 
     
-</div>
-</div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    
+
+    
 </form>
+</body>
+</html>

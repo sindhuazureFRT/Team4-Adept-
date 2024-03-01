@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="src/style.css" />
 	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static' ,filename='Adept.png')}}" />
 
 </head>
 <body data-instant-intensity="mousedown">
@@ -51,102 +51,36 @@
 		</div>
 	</nav>
 </header>
+<style type="text/css">
+    body {
+        background-image: url('{{url_for('static', filename='job9.jpg')}}');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Add additional styles as needed */
+    }
 
-<section class="section-3 py-5 bg-2 ">
-    <div class="container">     
-        <div class="row">
-            <div class="col-6 col-md-10 ">
-                <h2>Find Jobs</h2>  
-            </div>
-            <!-- <div class="col-6 col-md-2">
-                <div class="align-end">
-                    <select name="sort" id="sort" class="form-control">
-                        <option value="">Latest</option>
-                        <option value="">Oldest</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+    /* Add styles for other elements or sections as needed */
+    .section-1 {
+        background-color: rgba(255, 255, 255, 0.8); /* Example: Semi-transparent white background for section-1 */
+    }
 
+    /* Add more styles for other sections or elements as needed */
+</style>
+<section class="section-3 bg-2 py-5">
+    <div class="container">
+        <h2>Latest Jobs</h2>
         <div class="row pt-5">
-            <div class="col-md-4 col-lg-3 sidebar mb-4">
-                <div class="card border-0 shadow p-4">
-                    <div class="mb-4">
-                        <h2>Keywords</h2>
-                        <input type="text" placeholder="Keywords" class="form-control">
-                    </div>
-
-                    <div class="mb-4">
-                        <h2>Location</h2>
-                        <input type="text" placeholder="Location" class="form-control">
-                    </div>
-
-                    <div class="mb-4">
-                        <h2>Category</h2>
-                        <select name="category" id="category" class="form-control">
-                            <option value="">Select a Category</option>
-                            <option value="">Marketing</option>
-                            <option value="">Billing</option>
-                            <option value="">Service</option>
-                            <option value="">Labour</option>
-                            <option value="">Govt job</option>
-                            <option value="">Job for hours</option>
-                        
-                        </select>
-                    </div>                   
-
-                    <div class="mb-4">
-                        <h2>Job Type</h2>
-                        <div class="form-check mb-2"> 
-                            <input class="form-check-input " name="job_type" type="checkbox" value="1" id="">    
-                            <label class="form-check-label " for="">Full Time</label>
-                        </div>
-
-                        <div class="form-check mb-2"> 
-                            <input class="form-check-input school-section" name="job_type" type="checkbox" value="1" id="">    
-                            <label class="form-check-label " for="">Part Time</label>
-                        </div>
-
-                        <div class="form-check mb-2"> 
-                            <input class="form-check-input school-section" name="job_type" type="checkbox" value="1" id="">    
-                            <label class="form-check-label " for="">Job for hours</label>
-                        </div>
-
-                    </div>
-
-                    <div class="mb-4">
-                        <h2>Experience</h2>
-                        <select name="category" id="category" class="form-control">
-                            <option value="">Select Experience</option>
-                            <option value="">Fresher</option>
-                            <option value="">1 Year</option>
-                            <option value="">2 Years</option>
-                            <option value="">3 Years</option>
-                            <option value="">4 Years</option>
-                            <option value="">5 Years</option>
-                            <option value="">6 Years</option>
-                            <option value="">7 Years</option>
-                            <option value="">8 Years</option>
-                            <option value="">9 Years</option>
-                            <option value="">10 Years</option>
-                            <option value="">10+ Years</option>
-                        </select>
-                    </div>                    
-                </div>
-            </div>-->
-            <div class="col-md-8 col-lg-9 ">
-                <div class="job_listing_area">                    
-                    <div class="job_lists">
-                    {%for i in findjobs%}
+            <div class="job_listing_area">                    
+                <div class="job_lists">
                     <div class="row">
-                       
-                      
-                       <div class="col-md-7">
-                        <div class="card border-0 p-3 shadow mb-4">
-                            <div class="card-body">
-                                <h3 class="border-0 fs-5 pb-2 mb-0" >{{i[0]}}</h3>
+                        {%for i in findjobs%}   
+                        <div class="col-md-4">
+                            <div class="card border-0 p-3 shadow mb-4">
+                                <div class="card-body">
+                                    <h3 class="border-0 fs-5 pb-2 mb-0" >{{i[0]}}</h3>
                                 
-                                <div class="bg-light p-3 border">
+                                    <div class="bg-light p-3 border">
                                     <p class="mb-0">
                                         <span class="fw-bolder"><i class="fa fa-map-marker"></i></span>
                                         <span class="ps-1">{{i[5]}}</span>
@@ -184,18 +118,20 @@
                                 </div> -->
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
 
 
-                       {% endfor %}
-                                                 
-                    </div>
-                    </div>
+                       
                 </div>
             </div>
-            
         </div>
     </div>
+
+
+
+
+    
 </section>
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">

@@ -26,6 +26,12 @@ def home():
         find = cur.fetchall()
         sqlconnection.close()
         return render_template('index.html', findjobs=find, email=session['email'], password=session['psswd'])
+    sqlconnection = sqlite3.connect('adept.db')
+    cur = sqlconnection.cursor()
+    cur.execute("""select * from jobs""")
+    sqlconnection.commit()
+    find=cur.fetchall()
+    return render_template('index.html',findjobs=find)
     return render_template('index.html')
 
 @app.route('/about')
