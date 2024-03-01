@@ -52,12 +52,18 @@
                     
 				</ul>				
                
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+				{% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
 				<a class="btn btn-success my-2 my-sm-0" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
 	</nav>
 </header>
+
 <section class="section-0 lazy d-flex bg-image-style dark align-items-center "   class="" data-bg="assets/images/banner5.jpg">
     <img src="{{url_for('static', filename='img.jpg')}}" alt="Image1">
 

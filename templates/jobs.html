@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="src/style.css" />
 	<!-- Fav Icon -->
 	<link rel="shortcut icon" type="image/x-icon" href="#" />
+
 </head>
 <body data-instant-intensity="mousedown">
 <header>
@@ -39,12 +40,18 @@
 					</li>	
                    										
 				</ul>
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+				{% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
 	</nav>
 </header>
+
 <section class="section-3 py-5 bg-2 ">
     <div class="container">     
         <div class="row">

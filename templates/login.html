@@ -45,6 +45,23 @@
 		</div>
 	</nav>
 </header>
+<style type="text/css">
+    body {
+        background-image: url('{{url_for('static', filename='job9.jpg')}}');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Add additional styles as needed */
+    }
+
+    /* Add styles for other elements or sections as needed */
+    .section-1 {
+        background-color: rgba(255, 255, 255, 0.8); /* Example: Semi-transparent white background for section-1 */
+    }
+
+    /* Add more styles for other sections or elements as needed */
+</style>
+
 <section class="section-5">
     <div class="container my-5">
         <div class="py-lg-2">&nbsp;</div>
@@ -55,20 +72,22 @@
                     <form action='/log' method="POST">
                         <div class="mb-3">
                             <label for="" class="mb-2">Email*</label>
-                            <input type="text" name="email" id="email" class="form-control" placeholder="example@example.com">
+                            <input type="text" name="email"  required="email" class="form-control" placeholder="example@example.com">
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Password*</label>
-                            <input type="password" name="password" id="name" class="form-control" placeholder="Enter Password">
+                            <input type="password" name="password" required id="name" class="form-control" placeholder="Enter Password">
                         </div> 
                         <div class="justify-content-between d-flex">
                         <button class="btn btn-success mt-2">Login</button>
-                            <a href="forgot-password.html" class="mt-3"><p style="color:rgb(9, 16, 198);">Forgot Password?</p></a>
+                            <a href="/login" class="mt-3"><p style="color:rgb(9, 16, 198);">Forgot Password?</p></a>
+                            
                         </div>
+                        
                     </form>                    
                 </div>
                 <div class="mt-4 text-center">
-                    <p>Do not have an account?</p> <a  href="/register"><p style="color:rgb(9, 16, 198);">Register</p></a>
+                    <p>Do not have an account?</p> <a  href="/register"><h6 style="color:rgb(9, 16, 198);"><b>Register</b></h6></a>
                 </div>
             </div>
         </div>

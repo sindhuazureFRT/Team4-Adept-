@@ -17,7 +17,7 @@
 	<link rel="icon" type="image/x-icon" href="{{url_for('static' ,filename='adept.jpeg')}}" />
     
     
-    <style type="text/css">
+    <style  ="text/css">
         #carouselExampleCaptions
         img
         {
@@ -25,6 +25,12 @@
            min-height: 400px;
            
         }
+       .nav-item
+        {
+        left: 120px;
+       } 
+      
+
        
 
     </style>
@@ -54,10 +60,7 @@
 					</li>	
                     
 				</ul>				
-                <!-- <a class="btn btn-success me-2" href="/" type="submit">Home</a>
-                <a class="btn btn-success me-2" href="/about" type="submit">About</a>
-                <a class="btn btn-success me-2" href="/Findjobs" type="submit">Findjobs</a>
-                <a class="btn btn-success me-2" href="/account" type="submit">Profile</a> -->
+                
                 {% if 'email' in session %}
                 <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
             {% else %}
@@ -132,57 +135,6 @@
                     
                 </div>
             </div>            
-        </div>
-    </div>
-</section>
-
-<section class="section-2 bg-2 py-5">
-    <div class="container">
-        <h2>Popular Categories</h2>
-        <div class="row pt-5">
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgba(9, 16, 198);">Marketing</h4></a>
-                    <p class="mb-0"> <span>50</span> Available position</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Billing</h4></a>
-                    <p class="mb-0"> <span>50</span> Available position</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Service</h4></a>
-                    <p class="mb-0"> <span>50</span> Available position</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Labour</h4></a>
-                    <p class="mb-0"> <span>50</span> Available position</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Govt jobs</h4></a>
-                    <p class="mb-0"> Info</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Abroad</h4></a>
-                    <p class="mb-0"> Info</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="/Findjobs"><h4 style="color:rgb(9, 16, 198);">Job for hours</h4></a>
-                    <p class="mb-0"> <span>50</span> Available position</p>
-                </div>
-            </div>
-            </div>
         </div>
     </div>
 </section>
@@ -359,6 +311,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+    
 </section>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">

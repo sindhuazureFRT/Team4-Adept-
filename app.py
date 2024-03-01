@@ -7,7 +7,7 @@ app.secret_key="123"
 sqlconnection =sqlite3.connect("adept.db")
 #sqlconnection.execute("create table if not exists signin(id integer primary key,Name text, Email text,Password integer,Comfirm integer,cname text,cemail text,cmnumber integer,csubject text,cmessage text)")
 sqlconnection.execute("create table if not exists user(Name text,Email text,Password text,Confirm text)")
-sqlconnection.execute("create table if not exists apply(firstname text,lastname text,email text,mobile text,address text,city text,pincode text,date text)")
+sqlconnection.execute("create table if not exists apply(firstname text,lastname text,email text,mobile text,city text,jobrole text,pincode text,date text)")
 sqlconnection.execute("CREATE TABLE if not exists jobs(title text,category text,jobnature text,vacancy text,salary text,location text,description text,qualifications text,keywords text,name text, companylocation tect,website text)")
 
 sqlconnection.close()
@@ -122,15 +122,15 @@ def jobapply():
             lastname = request.form['lastname']
             email = request.form['email']
             mobile = request.form['mobile']
-            address = request.form['address']
             city = request.form['city']
+            jobrole = request.form['jobrole']
             pincode = request.form['pincode']
             date = request.form['date']
            
 
             sqlconnection = sqlite3.connect('adept.db')
             cur = sqlconnection.cursor()
-            cur.execute("INSERT INTO apply(firstname, lastname, email, mobile, address, city, pincode,  date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (firstname, lastname, email, mobile, address, city, pincode,  date))
+            cur.execute("INSERT INTO apply(firstname, lastname, email, mobile, city, jobrole, pincode,  date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (firstname, lastname, email, mobile, city, jobrole, pincode,  date))
             sqlconnection.commit()
             flash("Record added Successfully", "success")
         except Exception as e:

@@ -42,7 +42,12 @@
 						<a class="nav-link" aria-current="page" href="/jobapply"><p class="fs-5"></p></a>
 					</li>										
 				</ul>				
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+				{% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
@@ -87,11 +92,11 @@
                             
                             <div class="col-md-6 mb-4">
                                 <label for="" class="mb-2">Title<span class="req">*</span></label>
-                                <input type="text" placeholder="Job Title" id="title" name="title" class="form-control">
+                                <input type="text" placeholder="Job Title" id="title" name="title" required class="form-control">
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="" class="mb-2">Category<span class="req">*</span></label>
-                                <select name="category" id="category" class="form-control">
+                                <select name="category" required id="category" class="form-control">
                                     <option value="">Select a Category</option>
                                     <option value="Marketing">Marketing</option>
                                     <option value="Billing">Billing</option>
@@ -107,7 +112,7 @@
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label for="" class="mb-2">Job Nature<span class="req">*</span></label>
-                                <select name="jobnature" id="jobnature" class="form-control">
+                                <select name="jobnature" required id="jobnature" class="form-control">
                                     <option>Select a Nature</option>
                                     <option>Full Time</option>
                                     <option>Part Time</option>
@@ -116,37 +121,37 @@
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="" class="mb-2">Vacancy<span class="req">*</span></label>
-                                <input type="text" placeholder="Vacancy" id="vacancy" name="vacancy" class="form-control">
+                                <input type="text" placeholder="Vacancy" id="vacancy" name="vacancy" required class="form-control">
                             </div>
                         </div>
                         
                         <div class="row">
                             <div class="mb-4 col-md-6">
                                 <label for="" class="mb-2">Salary</label>
-                                <input type="text" placeholder="Salary" id="salary" name="salary" class="form-control">
+                                <input type="text" placeholder="Salary" id="salary" name="salary" required class="form-control">
                             </div>
 
                             <div class="mb-4 col-md-6">
                                 <label for="" class="mb-2">Location<span class="req">*</span></label>
-                                <input type="text" placeholder="location" id="location" name="location" class="form-control">
+                                <input type="text" placeholder="location" id="location" name="location" required class="form-control">
                             </div>
                         </div>
 
                         <div class="mb-4">
                             <label for="" class="mb-2">Description<span class="req">*</span></label>
-                            <textarea class="form-control" name="description" id="description" cols="5" rows="5" placeholder="Description"></textarea>
+                            <textarea class="form-control" name="description" required id="description" cols="5" rows="5" placeholder="Description"></textarea>
                         </div>
                         
                         <div class="mb-4">
                             <label for="" class="mb-2">Qualifications</label>
-                            <textarea class="form-control" name="qualifications" id="qualifications" cols="5" rows="5" placeholder="Qualifications"></textarea>
+                            <textarea class="form-control" name="qualifications" required id="qualifications" cols="5" rows="5" placeholder="Qualifications"></textarea>
                         </div>
                         
                         
 
                         <div class="mb-4">
                             <label for="" class="mb-2">Keywords<span class="req">*</span></label>
-                            <input type="text" placeholder="keywords" id="keywords" name="keywords" class="form-control">
+                            <input type="text" placeholder="keywords" id="keywords" name="keywords" required class="form-control">
                         </div>
                     
 
@@ -155,18 +160,18 @@
                         <div class="row">
                             <div class="mb-4 col-md-6">
                                 <label for="" class="mb-2">Name<span class="req">*</span></label>
-                                <input type="text" placeholder="Company Name" id="company_name" name="name" class="form-control">
+                                <input type="text" placeholder="Company Name" id="company_name" name="name" required class="form-control">
                             </div>
 
                             <div class="mb-4 col-md-6">
                                 <label for="" class="mb-2">Location</label>
-                                <input type="text" placeholder="Location" id="company_location" name="companylocation" class="form-control">
+                                <input type="text" placeholder="Location" id="company_location" name="companylocation" required class="form-control">
                             </div>
                         </div>
 
                         <div class="mb-4">
                             <label for="" class="mb-2">Website</label>
-                            <input type="text" placeholder="Website" id="website" name="website" class="form-control">
+                            <input type="text" placeholder="Website" id="website" name="website" required class="form-control">
                         </div>
                      
                         <div class="card-footer  p-4">

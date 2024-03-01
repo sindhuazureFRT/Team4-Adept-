@@ -39,7 +39,12 @@
 					</li>		
                    								
 				</ul>				
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+				{% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
@@ -94,6 +99,7 @@
                                         <th scope="col">Name</th>
                                         <th scope="col">Mobile</th>
                                         <th scope="col">Email</th>
+                                        <th scope="col">Date</th>
                                         <th scope="col">Place</th>
                                         <th scope="col">Date</th>
                                         <th scope="col"></th>
@@ -103,7 +109,6 @@
                                     <tr class="active">
                                         <td>
                                             <div class="job-name fw-500">{{j[0]}}</div>
-
                                         </td>
                                         <td>{{j[3]}}</td>
                                         <td>{{j[2]}}</td>

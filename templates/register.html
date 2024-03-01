@@ -45,6 +45,22 @@
 		</div>
 	</nav>
 </header>
+<style type="text/css">
+    body {
+        background-image: url('{{url_for('static', filename='job9.jpg')}}');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Add additional styles as needed */
+    }
+
+    /* Add styles for other elements or sections as needed */
+    .section-1 {
+        background-color: rgba(255, 255, 255, 0.8); /* Example: Semi-transparent white background for section-1 */
+    }
+
+    /* Add more styles for other sections or elements as needed */
+</style>
 <section class="section-5">
     <div class="container my-5">
         <div class="py-lg-2">&nbsp;</div>
@@ -55,25 +71,25 @@
                     <form action="/register" method="POST">
                         <div class="mb-3">
                             <label for="" class="mb-2">Name*</label>
-                            <input type="text" name="Name" id="name" class="form-control" placeholder="Enter Name">
+                            <input type="text" name="Name" required id="name" class="form-control" placeholder="Enter Name">
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Email*</label>
-                            <input type="text" name="Email" id="email" class="form-control" placeholder="Enter Email">
+                            <input type="text" name="Email"  required id="email" class="form-control" placeholder="Enter Email">
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Password*</label>
-                            <input type="password" name="Password" id="name" class="form-control" placeholder="Enter Password">
+                            <input type="password" name="Password" required id="name" class="form-control" placeholder="Enter Password">
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Confirm Password*</label>
-                            <input type="password" name="Confirm" id="name" class="form-control" placeholder="Enter Password">
+                            <input type="password" name="Confirm"  required id="name" class="form-control" placeholder="Enter Password">
                         </div> 
                         <button class="btn btn-success mt-2">Register</button>
                     </form>                    
                 </div>
                 <div class="mt-4 text-center">
-                    <p>Have an account?</p> <a  href="/login"><p style="color:rgb(9, 16, 198);">Login</p></a>
+                    <p>Have an account?</p> <a  href="/login"><h5 style="color:rgb(9, 16, 198);"><b>Login</b></h5></a>
                 </div>
             </div>
         </div>

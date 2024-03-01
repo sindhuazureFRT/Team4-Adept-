@@ -39,7 +39,12 @@
 					</li>	
                     										
 				</ul>				
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+                {% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>

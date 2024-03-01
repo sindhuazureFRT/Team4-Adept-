@@ -40,7 +40,12 @@
                    	
                    									
 				</ul>				
-				<a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+                {% if 'email' in session %}
+                <a class="btn btn-success me-2" href="/logout" type="submit">Logout</a>
+            {% else %}
+
+            <a class="btn btn-success me-2" href="/login" type="submit">Login</a>
+            {% endif %}
 				<a class="btn btn-success" href="/postjobs" type="submit">Post a Job</a>
 			</div>
 		</div>
@@ -55,45 +60,46 @@
                     <form action="/jobapply" method="POST">
                     <div class="col-md-6 mb-4">
                         <label for="" class="mb-2">First Name<span class="req">*</span></label>
-                        <input type="text" placeholder="Enter First Name" id="first-name" name="firstname" class="form-control">
+                        <input type="text" placeholder="Enter First Name" id="first-name" name="firstname" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-4">
                         <label for="" class="mb-2">Last Name<span class="req">*</span></label>
-                        <input type="text" placeholder="Enter Last Name" id="last-name" name="lastname" class="form-control">
+                        <input type="text" placeholder="Enter Last Name" id="last-name" name="lastname" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-4">
                         <label for="" class="mb-2">Email<span class="req">*</span></label>
-                        <input type="email" placeholder="Enter Email" id="last-name" name="email" class="form-control">
+                        <input type="email" placeholder="Enter Email" id="last-name" name="email" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-4">
                         <label for="" class="mb-2">Mobile<span class="req">*</span></label>
-                        <input type="text" placeholder="Enter mobile number" id="last-name" name="mobile" class="form-control">
+                        <input type="text" placeholder="Enter mobile number" id="last-name" name="mobile" required class="form-control">
+                    </div>
+                    <div class="col-md-6  mb-4">
+                        <label for="" class="mb-2">City<span class="req">*</span></label>
+                        <input type="text"  placeholder="Enter City" id="city" name="city" required class="form-control">
                     </div>
                 </div>
                 
                 <div class="row">
                    <center><div class="col-md-6 mb-4">
-                        <label for="" class="mb-2">Address<span class="req">*</span></label>
-                        <input type="text" min="1" placeholder="Enter City" id="city" name="address" class="form-control">
+                        <label for="" class="mb-2">Job role<span class="req">*</span></label>
+                        <input type="text"  placeholder="Enter job role" id="job role" name="jobrole" required class="form-control">
                     </div></center> 
                         
                     </div>
 
-                    <div class="col-md-6  mb-4">
-                        <label for="" class="mb-2">City<span class="req">*</span></label>
-                        <input type="text" min="1" placeholder="Enter City" id="city" name="city" class="form-control">
-                    </div>
+                    
                 </div>
 
                 <div class="row">
                    <center><div class="col-md-6 mb-4 ">
                         <label for="" class="mb-2">Pincode</label>
-                        <input type="pincode" placeholder="Enter Pincode" id="pincode" name="pincode" class="form-control">
+                        <input type="pincode" placeholder="Enter Pincode" id="pincode" name="pincode" required class="form-control">
                     </div></center>
 
                     <center><div class="mb-4 col-md-6">
                         <label for="" class="mb-2">Date<span class="req">*</span></label>
-                        <input type="date"  id="date" name="date"  value="2022-10-24"class="form-control">
+                        <input type="date"  id="date" name="date"  required value="2022-10-24"class="form-control">
                     </div></center>
 
                 </div>
