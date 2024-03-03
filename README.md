@@ -17,3 +17,28 @@ Cloud Deployment
 Monitoring
 
 Technologies Used
+
+# Frontend:
+HTML
+
+CSS
+
+JavaScript
+
+Bootstrap
+
+# Backend:
+Python
+
+Flask
+
+SQLite
+
+# Team Members
+Sanjay M Cloud Deployment
+
+Aparna R Frontend Developer
+
+Sindhu S Backend Developer
+
+Anand Kumar K Tester
