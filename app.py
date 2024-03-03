@@ -167,6 +167,9 @@ def chatbot():
 @app.route('/jobapplied')
 def jobapplied():
     return render_template('job-applied.html')
+@app.route('/mail')
+def mail():
+    return render_template('mail.html')
 @app.route('/savedjobs')
 def savedjobs():
     return render_template('saved-jobs.html')
