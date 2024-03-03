@@ -1,7 +1,7 @@
 ## Adept Job Portal Project
 ## Overview
 ## Welcome to the Adept a Job Portal Project!
-This project aims to assign job for the people who has skill to do work with their low qualification level. It is deployed on Azure Web App with virtual network configuration and incorporates AI monitoring for enhanced performance tracking.
+This project aims to assign job for the people who has skill to do work with their low qualification level.and it also helps to solve the requirement that is need for the job provider to select a right person for their requirement.this websit acts as an inter mediator between the job seeker and the provider. It is deployed on Azure Web App with virtual network configuration and incorporates AI monitoring for enhanced performance tracking.
 
 ## Table of Contents
 Technologies Used
