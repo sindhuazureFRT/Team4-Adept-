@@ -42,3 +42,23 @@ Aparna R Frontend Developer
 Sindhu S Backend Developer
 
 Anand Kumar K Tester
+
+# Azure Services Integration
+This project leverages various Azure services to ensure scalability, reliability, and performance.
+
+# Resource Group:
+Organizes and manages Azure resources efficiently.
+
+# Virtual Network:
+Provides a secure and isolated network environment for the project.
+
+# Web App:
+Hosts the Job Portal platform using Flask for the backend, HTML, CSS, and JavaScript for the frontend, along with Bootstrap for responsive design
+
+# Virtual Network Integration:
+Ensures secure communication between the web app and other Azure resources.
+
+# Monitor:
+Monitors the performance and health of the application, helping in proactive issue resolution
+
+# Screenshort
