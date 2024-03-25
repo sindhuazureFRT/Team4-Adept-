@@ -35,7 +35,7 @@ Flask
 SQLite
 
 ## Team Members
-Sanjay M Cloud Deployment
+Sanjai M Cloud Deployment
 
 Aparna R Frontend Developer
 
